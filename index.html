@@ -1,0 +1,88 @@
+<!-- Partie 1 – Structure HTML de l’AI Workspace -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workspace</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Barre latérale de l'AI workspace -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-microchip-ai logo-icon"></i>
+            <span>AI Workspace</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#chat" class="nav-link" data-section="chat">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#summarize" class="nav-link" data-section="summarize">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Résumé de texte</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#translation" class="nav-link" data-section="translation">
+                        <i class="fa-solid fa-language"></i>
+                        <span>Traduction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#predict" class="nav-link" data-section="predict">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Prédiction</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#history" class="nav-link" data-section="history">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Historique</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="odc-tag">
+                <span class="orange-dot"></span> 
+            </div>
+        </div>
+    </aside>
+
+    <!-- Entête de L'AI workspace -->
+    <header class="header">
+        <div class="header-left">
+            <h1 id="active-section-title"></h1>
+        </div>
+        <div class="header-right">
+            <div class="user-profile">
+                <span class="user-name">Admin User</span>
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </div>
+        </div>
+    </header>
+
+        <main class="app-content" id="main-content">
+            <div id="dashboard-view">
+                <h2>Tableau de bord</h2>
+                <p>Bienvenue sur votre espace de travail intelligent.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
