@@ -85,3 +85,25 @@ function ajouterMessage(chatBox, texte, type) {
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+/* ==================================================================
+   PARTIE 6 — PRÉDICTION (fictive)
+================================================================== */
+document.getElementById("pred-btn").addEventListener("click", () => {
+  const age = document.getElementById("pred-age").value;
+  const revenu = document.getElementById("pred-revenu").value;
+  const ville = document.getElementById("pred-ville").value.trim();
+  const output = document.getElementById("pred-output");
+
+  if (!age || !revenu || !ville) {
+    output.textContent = "Veuillez remplir tous les champs.";
+    return;
+  }
+
+  // Simulation : prédiction fictive basée sur les données
+  const score = (Number(age) * 0.3 + Number(revenu) * 0.0001).toFixed(2);
+  const resultat = `Profil : ${ville} — score de prédiction fictif : ${score}`;
+  output.textContent = resultat;
+
+  saveToHistory("Prédiction", `âge=${age}, revenu=${revenu}, ville=${ville}`, resultat);
+});
