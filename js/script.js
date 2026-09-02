@@ -53,3 +53,35 @@ document.getElementById("traduction-btn").addEventListener("click", () => {
 
   saveToHistory("Traduction", texte, traduction);
 });
+
+/* ==================================================================
+   PARTIE 5 — CHAT IA (simulé)
+================================================================== */
+document.getElementById("chat-send").addEventListener("click", envoyerMessage);
+document.getElementById("chat-input").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") envoyerMessage();
+});
+
+function envoyerMessage() {
+  const input = document.getElementById("chat-input");
+  const message = input.value.trim();
+  const chatBox = document.getElementById("chat-messages");
+
+  if (!message) return;
+
+  ajouterMessage(chatBox, message, "user");
+
+  const reponse = `Voici une réponse simulée à : "${message}"`;
+  ajouterMessage(chatBox, reponse, "ia");
+
+  saveToHistory("Chat", message, reponse);
+  input.value = "";
+}
+
+function ajouterMessage(chatBox, texte, type) {
+  const div = document.createElement("div");
+  div.classList.add("chat-message", type);
+  div.textContent = texte;
+  chatBox.appendChild(div);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
