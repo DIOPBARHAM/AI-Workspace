@@ -1,88 +1,76 @@
-<!-- Partie 1 – Structure HTML de l’AI Workspace -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Workspace</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workspace</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Barre latérale de l'AI workspace -->
-    <aside class="sidebar">
-        <div class="sidebar-brand">
-            <i class="fa-solid fa-microchip-ai logo-icon"></i>
-            <span>AI Workspace</span>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li>
-                    <a href="#dashboard" class="nav-link active" data-section="dashboard">
-                        <i class="fa-solid fa-chart-pie"></i>
-                        <span>Tableau de bord</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#chat" class="nav-link" data-section="chat">
-                        <i class="fa-solid fa-comments"></i>
-                        <span>Chat</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#summarize" class="nav-link" data-section="summarize">
-                        <i class="fa-solid fa-file-lines"></i>
-                        <span>Résumé de texte</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#translation" class="nav-link" data-section="translation">
-                        <i class="fa-solid fa-language"></i>
-                        <span>Traduction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#predict" class="nav-link" data-section="predict">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <span>Prédiction</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#history" class="nav-link" data-section="history">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <span>Historique</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="odc-tag">
-                <span class="orange-dot"></span> 
-            </div>
-        </div>
-    </aside>
+  <!-- ============================================================
+       PARTIE 1 — En-tête
+  ============================================================ -->
+  <header class="header">
+    <div class="logo">AI Workspace</div>
+    <div class="user">Admin User ▾</div>
+  </header>
 
-    <!-- Entête de L'AI workspace -->
-    <header class="header">
-        <div class="header-left">
-            <h1 id="active-section-title"></h1>
-        </div>
-        <div class="header-right">
-            <div class="user-profile">
-                <span class="user-name">Admin User</span>
-                <i class="fa-solid fa-chevron-down profile-arrow"></i>
-            </div>
-        </div>
-    </header>
+  <div class="layout">
 
-        <main class="app-content" id="main-content">
-            <div id="dashboard-view">
-                <h2>Tableau de bord</h2>
-                <p>Bienvenue sur votre espace de travail intelligent.</p>
-            </div>
-        </main>
-    </div>
+    <!-- ==========================================================
+         PARTIE 1 — Barre latérale (menu des modules)
+    ========================================================== -->
+    <nav class="sidebar">
+      <ul>
+        <li class="menu-item active" data-target="dashboard">Tableau de bord</li>
+        <li class="menu-item" data-target="chat">Chat</li>
+        <li class="menu-item" data-target="resume">Résumé de texte</li>
+        <li class="menu-item" data-target="classification">Classification</li>
+        <li class="menu-item" data-target="traduction">Traduction</li>
+        <li class="menu-item" data-target="prediction">Prédiction</li>
+        <li class="menu-item" data-target="historique">Historique</li>
+      </ul>
+    </nav>
 
-    <script src="js/script.js" defer></script>
+    <!-- ==========================================================
+         PARTIE 1 — Zone principale (un <section> par module)
+    ========================================================== -->
+    <main class="main-content">
+
+      <!-- ---------- Tableau de bord ---------- -->
+      <section id="dashboard" class="module active">
+        <h1>Tableau de bord</h1>
+        <p>Bienvenue sur votre espace de travail intelligent.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card"><span class="stat-number">24</span><span>Jeux de données</span></div>
+          <div class="stat-card"><span class="stat-number">1 256</span><span>Requêtes</span></div>
+          <div class="stat-card"><span class="stat-number">12</span><span>Modèles disponibles</span></div>
+          <div class="stat-card"><span class="stat-number">8</span><span>Utilisateurs actifs</span></div>
+          <div class="stat-card"><span class="stat-number">342</span><span>Tâches exécutées</span></div>
+        </div>
+        <div class="charts-grid">
+          <img src="images/requetes par jour.png" alt="Requêtes par jour" class="chart-img">
+          <img src="images/repartition des requetes.png" alt="Répartition des requêtes par service" class="chart-img">
+        </div>
+      </section>
+         <!-- ---------- Résumé de texte (PARTIE 3) ---------- -->
+      <section id="resume" class="module">
+        <h1>Résumé de texte</h1>
+        <textarea id="resume-input" rows="6" placeholder="Collez votre texte ici..."></textarea>
+        <button id="resume-btn">Résumer</button>
+        <div id="resume-output" class="output-box"></div>
+      </section>
+
+      <!-- ---------- Classification (non détaillée dans l'énoncé) ---------- -->
+      <section id="classification" class="module">
+        <h1>Classification</h1>
+        <p>Module non détaillé dans l'énoncé — squelette prêt pour une future partie.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
