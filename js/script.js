@@ -33,3 +33,23 @@ document.getElementById("resume-btn").addEventListener("click", () => {
 
   saveToHistory("Résumé de texte", texte, resume);
 });
+
+/* ==================================================================
+   PARTIE 4 — TRADUCTION (simulée)
+================================================================== */
+document.getElementById("traduction-btn").addEventListener("click", () => {
+  const texte = document.getElementById("traduction-input").value.trim();
+  const langue = document.getElementById("traduction-langue").value;
+  const output = document.getElementById("traduction-output");
+
+  if (!texte) {
+    output.textContent = "Veuillez saisir un texte à traduire.";
+    return;
+  }
+
+  const langues = { en: "anglais", es: "espagnol", de: "allemand", ar: "arabe" };
+  const traduction = `[Traduction simulée en ${langues[langue]}] ${texte}`;
+  output.textContent = traduction;
+
+  saveToHistory("Traduction", texte, traduction);
+});
