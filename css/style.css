@@ -180,6 +180,19 @@ body {
   padding: 8px 4px;
   border-bottom: 1px solid #f3f4f6;
 }
+.link-bleu {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  color: #3b82f6;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.link-bleu:hover {
+  text-decoration: underline;
+}
+
 
 /* ==============================================================
    PARTIE 2 — Éléments de formulaire communs
@@ -265,3 +278,33 @@ button:hover {
 .chat-message.ia {
   background: #f3f4f6;
 }
+
+/* ==============================================================
+   PARTIE 7 — Historique
+============================================================== */
+.hist-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.hist-list li {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hist-list .hist-delete {
+  background: #ef4444;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+.hist-list .hist-delete:hover {
+  background: #dc2626;
+}
+

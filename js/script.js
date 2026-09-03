@@ -159,3 +159,18 @@ document.getElementById("pred-btn").addEventListener("click", () => {
 
   saveToHistory("Prédiction", `âge=${age}, revenu=${revenu}, ville=${ville}`, resultat);
 });
+
+/* ==================================================================
+   PARTIE 7 (lien rapide) — "Voir tout l'historique" depuis le
+   tableau de bord : bascule directement vers le module Historique
+================================================================== */
+document.getElementById("voir-historique").addEventListener("click", (e) => {
+  e.preventDefault();
+  afficherModule("historique");
+});
+
+/* "Voir tous les modèles" : pas de module dédié dans l'atelier,
+   le lien est prêt si un module "Modèles" est ajouté plus tard. */
+document.getElementById("voir-modeles").addEventListener("click", (e) => {
+  e.preventDefault();
+});
