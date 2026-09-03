@@ -37,23 +37,42 @@ body {
   margin-bottom: 10px; /* correction du "margin-r" */
 }
 
-.chart-header h3 {
-  margin: 10px ;
-  font-size: 1.1rem;
+
+.chart-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.chart-header h3,
+.chart-panel h3 {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .mini-select {
   width: 140px;
-  min-width: 140px;
-  padding: 2px 8px;
+  padding: 5px 8px;
   font-size: 0.8rem;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  background: #ffffff;
-  color: #333;
-  cursor: pointer;
-  text-align: right;
-  margin-left: auto; 
+  background: #fff;
+}
+
+.chart-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 
