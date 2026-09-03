@@ -29,6 +29,33 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
 }
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* aligné à gauche */
+  gap: 12px;
+  margin-bottom: 10px; /* correction du "margin-r" */
+}
+
+.chart-header h3 {
+  margin: 10px ;
+  font-size: 1.1rem;
+}
+
+.mini-select {
+  width: 140px;
+  min-width: 140px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #333;
+  cursor: pointer;
+  text-align: right;
+  margin-left: auto; 
+}
+
 
 /* ==============================================================
    PARTIE 2 — Mise en page générale (Flexbox : sidebar + contenu)

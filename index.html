@@ -15,7 +15,6 @@
     <div class="logo">AI Workspace</div>
     <div class="user">Admin User ▾</div>
   </header>
-
   <div class="layout">
 
     <!-- ==========================================================
@@ -69,8 +68,17 @@
             <span class="trend warning">+22% ce mois-ci</span>
           </div>
         </div>
-        <div class="charts-grid">
+        <div class="chart-header">
+          <h3>Requêtes par jour</h3>
+          <select class="mini-select" aria-label="Période">
+            <option selected>7 derniers jours</option>
+            <option>30 derniers jours</option>
+            <option>90 derniers jours</option>
+            <option>12 mois</option>
+          </select>
+        </div>
           <img src="images/requetes par jour.png" alt="Requêtes par jour" class="chart-img">
+          <h3>Répartition des requêtes par service</h3>
           <img src="images/repartition des requetes.png" alt="Répartition des requêtes par service" class="chart-img">
         </div>
         <!-- Le contenu des 2 tableaux ci-dessous est injecté par script.js -->
