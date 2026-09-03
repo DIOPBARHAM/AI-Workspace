@@ -16,6 +16,58 @@ menuItems.forEach((item) => {
 });
 
 /* ==================================================================
+   PARTIE 1 — Contenu du tableau de bord (texte géré en JS)
+   Reprend les données "Activité récente" et "Modèles populaires"
+   affichées dans la maquette de l'atelier.
+================================================================== */
+const activitesRecentes = [
+  { activite: "Résumé du document_projet.pdf", service: "Résumé de texte", utilisateur: "Admin User", date: "21/05/2024 14:32" },
+  { activite: "Classification de sentiments", service: "Classification", utilisateur: "Admin User", date: "21/05/2024 14:21" },
+  { activite: "Traduction FR → EN", service: "Traduction", utilisateur: "Admin User", date: "21/05/2024 14:15" },
+  { activite: "Discussion sur l'IA générative", service: "Chat", utilisateur: "Admin User", date: "21/05/2024 14:05" },
+  { activite: "Génération d'idées de projet", service: "Idées", utilisateur: "Admin User", date: "21/05/2024 13:50" },
+];
+
+const modelesPopulaires = [
+  { modele: "mistral-7b-instruct", utilisations: 532 },
+  { modele: "gpt-4-turbo", utilisations: 389 },
+  { modele: "llama-3-8b", utilisations: 256 },
+  { modele: "bert-base-uncased", utilisations: 179 },
+  { modele: "google-translate-v1", utilisations: 142 },
+];
+
+function afficherActiviteRecente() {
+  const tbody = document.querySelector("#table-activite tbody");
+  tbody.innerHTML = activitesRecentes
+    .map(
+      (a) => `
+      <tr>
+        <td>${a.activite}</td>
+        <td>${a.service}</td>
+        <td>${a.utilisateur}</td>
+        <td>${a.date}</td>
+      </tr>`
+    )
+    .join("");
+}
+
+function afficherModelesPopulaires() {
+  const tbody = document.querySelector("#table-modeles tbody");
+  tbody.innerHTML = modelesPopulaires
+    .map(
+      (m) => `
+      <tr>
+        <td>${m.modele}</td>
+        <td>${m.utilisations}</td>
+      </tr>`
+    )
+    .join("");
+}
+
+afficherActiviteRecente();
+afficherModelesPopulaires();
+
+/* ==================================================================
    PARTIE 3 — RÉSUMÉ DE TEXTE (simulé)
 ================================================================== */
 document.getElementById("resume-btn").addEventListener("click", () => {

@@ -26,7 +26,6 @@
         <li class="menu-item active" data-target="dashboard">Tableau de bord</li>
         <li class="menu-item" data-target="chat">Chat</li>
         <li class="menu-item" data-target="resume">Résumé de texte</li>
-        <li class="menu-item" data-target="classification">Classification</li>
         <li class="menu-item" data-target="traduction">Traduction</li>
         <li class="menu-item" data-target="prediction">Prédiction</li>
         <li class="menu-item" data-target="historique">Historique</li>
@@ -44,15 +43,57 @@
         <p>Bienvenue sur votre espace de travail intelligent.</p>
 
         <div class="stats-grid">
-          <div class="stat-card"><span class="stat-number">24</span><span>Jeux de données</span></div>
-          <div class="stat-card"><span class="stat-number">1 256</span><span>Requêtes</span></div>
-          <div class="stat-card"><span class="stat-number">12</span><span>Modèles disponibles</span></div>
-          <div class="stat-card"><span class="stat-number">8</span><span>Utilisateurs actifs</span></div>
-          <div class="stat-card"><span class="stat-number">342</span><span>Tâches exécutées</span></div>
+          <div class="stat-card">
+            <span class="stat-number">24</span>
+            <span>Jeux de données</span>
+            <span class="trend one">+3 ce mois-ci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1 256</span>
+            <span>Requêtes</span>
+            <span class="trend two">+18% ce mois-ci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">12</span>
+            <span>Modèles disponibles</span>
+            <span class="trend tree">+2 ce mois-ci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">8</span>
+            <span>Utilisateurs actifs</span>
+            <span class="trend fourth">+2 ce mois-ci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">342</span>
+            <span>Tâches exécutées</span>
+            <span class="trend warning">+22% ce mois-ci</span>
+          </div>
         </div>
         <div class="charts-grid">
           <img src="images/requetes par jour.png" alt="Requêtes par jour" class="chart-img">
           <img src="images/repartition des requetes.png" alt="Répartition des requêtes par service" class="chart-img">
+        </div>
+        <!-- Le contenu des 2 tableaux ci-dessous est injecté par script.js -->
+        <div class="tables-grid">
+          <div class="table-card">
+            <h2>Activité récente</h2>
+            <table id="table-activite">
+              <thead>
+                <tr><th>Activité</th><th>Service</th><th>Utilisateur</th><th>Date</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="table-card">
+            <h2>Modèles populaires</h2>
+            <table id="table-modeles">
+              <thead>
+                <tr><th>Modèle</th><th>Utilisations</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
       </section>
          <!-- ---------- Résumé de texte (PARTIE 3) ---------- -->

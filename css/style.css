@@ -102,7 +102,28 @@ body {
 .stat-number {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #3b82f6;
+  color: #000000;
+}
+
+.trend {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.trend.one {
+  color: #198ed2;
+}
+.trend.two {
+  color: #2fb861;
+}
+.trend.tree {
+  color: #dc2626;
+}
+.trend.fourth {
+  color: #f97316; 
+}
+.trend.warning {
+  color: #00f1fa; 
 }
 
 .charts-grid {
@@ -117,6 +138,47 @@ body {
   background: #fff;
   padding: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================================================
+   PARTIE 2 — Tableaux (Activité récente / Modèles populaires)
+============================================================== */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.table-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-card h2 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table-card th {
+  text-align: left;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 6px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-card td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #f3f4f6;
 }
 
 /* ==============================================================
@@ -173,6 +235,7 @@ button:hover {
 .input-row input {
   flex: 1;
 }
+
 /* ==============================================================
    PARTIE 5 — Chat
 ============================================================== */
